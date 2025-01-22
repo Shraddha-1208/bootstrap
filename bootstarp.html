@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity Donation Platform</title>
+  <!-- Bootstrap CSS Link -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="bg-info text-white text-center p-5">
+    <h1 class="display-4">Make a Difference Today</h1>
+    <p class="lead">Your donation can change lives. Contribute to a cause that matters to you.</p>
+    <a href="#donate" class="btn btn-light btn-lg" data-toggle="modal" data-target="#donationModal">Donate Now</a>
+  </section>
+
+  <!-- Alerts Section -->
+  <div class="container mt-4">
+    <div class="alert alert-success" role="alert">
+      🎉 **Thank you for supporting our mission!** Your donations make a significant impact.
+    </div>
+  </div>
+
+  <!-- About Us Section -->
+  <section class="container mt-5">
+    <h2 class="text-center mb-4">About Our Platform</h2>
+    <p class="lead text-center">
+      We connect generous donors with impactful charity organizations around the world. Our mission is to improve lives through the power of collective giving.
+    </p>
+  </section>
+
+  <!-- Charity Cards Section -->
+  <section id="charities" class="container mt-5">
+    <h2 class="text-center mb-4">Charity Organizations</h2>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="image/child.png" class="card-img-top" alt="Charity 1">
+          <div class="card-body">
+            <h5 class="card-title">Save The Children</h5>
+            <p class="card-text">Help provide food, education, and healthcare to children in need.</p>
+            <a href="#donate" class="btn btn-primary" data-toggle="modal" data-target="#donationModal">Donate Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="image/th.jpg" class="card-img-top" alt="Charity 2">
+          <div class="card-body">
+            <h5 class="card-title">World Wildlife Fund</h5>
+            <p class="card-text">Support conservation efforts to protect endangered species and habitats.</p>
+            <a href="#donate" class="btn btn-primary" data-toggle="modal" data-target="#donationModal">Donate Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="image/DOCTORS.png" class="card-img-top" alt="Charity 3">
+          <div class="card-body">
+            <h5 class="card-title">Doctors Without Borders</h5>
+            <p class="card-text">Provide emergency medical care in regions affected by crises.</p>
+            <a href="#donate" class="btn btn-primary" data-toggle="modal" data-target="#donationModal">Donate Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="container mt-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Your message here..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Modal: Donation -->
+  <div class="modal fade" id="donationModal" tabindex="-1" role="dialog" aria-labelledby="donationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="donationModalLabel">Donate to a Cause</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="donationAmount">Donation Amount</label>
+              <input type="number" class="form-control" id="donationAmount" placeholder="Enter amount in Rupees" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Donate Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Form Submitted -->
+  <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModalLabel">Message Submitted</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Thank you for reaching out. We will get back to you as soon as possible. Your inquiry is important to us.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white text-center p-4 mt-5">
+    <p>&copy; 2024 Charity Donation Platform. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script>
+    // Handle form submission to show success modal
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the form from actually submitting
+      $('#formModal').modal('show'); // Show the modal after form submission
+    });
+  </script>
+</body>
+</html>
